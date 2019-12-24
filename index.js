@@ -1,2 +1,2 @@
-export { DefaultToastContainer, DefaultToast } from './examples/Toast';
-export default from './examples/Toast';
+export { DefaultToastContainer, DefaultToast } from './lib/Toast';
+export default from './lib/Toast';
