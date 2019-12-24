@@ -33,7 +33,7 @@ Toast.add({
 });
 ```
 
-[See a more in-depth example.](./lib/CustomComponentExample.js)
+[See a more in-depth example.](examples/CustomComponentExample.js)
 
 ## Configuration
 
@@ -55,7 +55,7 @@ Toast.configure({
 });
 ```
 
-[See a more in-depth example.](./lib/ConfigurationExample.js)
+[See a more in-depth example.](examples/ConfigurationExample.js)
 
 ## Running the example app
 
