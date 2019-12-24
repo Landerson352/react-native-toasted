@@ -1,5 +1,5 @@
 {
-  "name": "react-native-toasty",
+  "name": "react-native-toasted",
   "version": "1.0.0",
   "description": "React-Native toast notifications",
   "main": "index.js",

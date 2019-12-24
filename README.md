@@ -1,4 +1,4 @@
-# react-native-toasty
+# react-native-toasted
 
 This React-Native toast library offers style and layout customization
 by **supplying your own display components**.
@@ -9,7 +9,7 @@ and **structure** the contents however you want.
 ## Installation
 
 ```$jsx
-yarn add react-native-toasty
+yarn add react-native-toasted
 ```
 
 *(No linking required.)*
@@ -17,7 +17,7 @@ yarn add react-native-toasty
 ## Usage
 
 ```$jsx
-import Toast from 'react-native-toasty';
+import Toast from 'react-native-toasted';
 
 // String content shorthand
 Toast.add('Hello Toasty!');
@@ -40,7 +40,7 @@ Toast.add({
 Make sure to call `Toast.configure` once in your app, before calling `Toasts.add`.
 
 ```$jsx
-import Toast, { DefaultToast, DefaultToastContainer } from 'react-native-toasty';
+import Toast, { DefaultToast, DefaultToastContainer } from 'react-native-toasted';
 
 Toast.configure({
 

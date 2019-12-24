@@ -4067,7 +4067,7 @@ react-native-root-siblings@~4.0.6:
   dependencies:
     static-container "^1.5.1"
 
-"react-native-toasty@file:..":
+"react-native-toasted@file:..":
   version "1.0.0"
   dependencies:
     lodash "~4.17.15"
