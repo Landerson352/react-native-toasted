@@ -1,11 +1,11 @@
 import { LayoutAnimation } from 'react-native';
 
-import Toasts, { DefaultToastContainer, DefaultToast } from './Toasts';
+import Index, { DefaultToastContainer, DefaultToast } from '../index';
 
 // This configuration is completely optional.
 // Each value can be removed or overridden.
 // If you want to style the toasts, just override the base ToastComponent.
-Toasts.configure({
+Index.configure({
   defaultToastProps: {
     duration: 3500,
     ToastComponent: DefaultToast,

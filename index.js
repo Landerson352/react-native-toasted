@@ -46,7 +46,7 @@ export const DefaultToast = ({ content }) => {
   );
 };
 
-const Toasts = (props) => {
+const Index = (props) => {
   const {
     layoutAnimationConfig,
     ToastContainerComponent,
@@ -54,7 +54,7 @@ const Toasts = (props) => {
   const [toasts, setToasts] = React.useState([]);
 
   React.useEffect(() => {
-    Toasts.methods = { setToasts };
+    Index.methods = { setToasts };
   }, []);
 
   React.useEffect(() => {
@@ -65,42 +65,42 @@ const Toasts = (props) => {
     <ToastContainerComponent toasts={toasts} />
   );
 };
-Toasts.add = (props) => {
+Index.add = (props) => {
   // Auto-configure if it was not called manually
-  if (!Toasts.rootSiblings) {
-    Toasts.configure();
-    setTimeout(() => Toasts.add(props), 1);
+  if (!Index.rootSiblings) {
+    Index.configure();
+    setTimeout(() => Index.add(props), 1);
     return;
   }
 
   // Validate and apply defaults
   let validatedProps = (typeof props === 'object' && !React.isValidElement(props)) ? props : { content: props };
-  validatedProps = { ...Toasts.configuration.defaultToastProps, ...validatedProps };
+  validatedProps = { ...Index.configuration.defaultToastProps, ...validatedProps };
 
   const id = uniqueId();
-  Toasts.methods.setToasts((toasts) => [...toasts, {
+  Index.methods.setToasts((toasts) => [...toasts, {
     ...validatedProps,
     key: id,
     id,
   }]);
 
   if (validatedProps.duration) {
-    setTimeout(() => Toasts.remove(id), validatedProps.duration);
+    setTimeout(() => Index.remove(id), validatedProps.duration);
   }
 
   return id;
 };
-Toasts.remove = (id) => {
-  Toasts.methods.setToasts((toasts) => {
+Index.remove = (id) => {
+  Index.methods.setToasts((toasts) => {
     return filter(toasts, (toast) => toast.id !== id);
   });
 };
-Toasts.configure = (customConfiguration = null) => {
+Index.configure = (customConfiguration = null) => {
   const configuration = merge({}, defaultConfiguration, customConfiguration);
-  Toasts.configuration = configuration;
+  Index.configuration = configuration;
 
-  Toasts.rootSiblings = new RootSiblings(
-    <Toasts {...configuration} />
+  Index.rootSiblings = new RootSiblings(
+    <Index {...configuration} />
   );
 };
 
@@ -113,4 +113,4 @@ const defaultConfiguration = {
   ToastContainerComponent: DefaultToastContainer,
 };
 
-export default Toasts;
+export default Index;
