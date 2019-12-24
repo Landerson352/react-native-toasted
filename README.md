@@ -8,7 +8,7 @@ and **structure** the contents however you want.
 
 ## Installation
 
-```$jsx
+```jsx
 yarn add react-native-toasted
 ```
 
@@ -16,7 +16,7 @@ yarn add react-native-toasted
 
 ## Usage
 
-```$jsx
+```jsx
 import Toast from 'react-native-toasted';
 
 // String content shorthand
@@ -39,7 +39,7 @@ Toast.add({
 
 Make sure to call `Toast.configure` once in your app, before calling `Toasts.add`.
 
-```$jsx
+```jsx
 import Toast, { DefaultToast, DefaultToastContainer } from 'react-native-toasted';
 
 Toast.configure({
