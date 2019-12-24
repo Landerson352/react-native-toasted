@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-import Index from '../index';
+import Toast from './Toast';
 
 // Once you create a custom component,
 //  you can assign as defaultToastProps.ToastComponent
@@ -13,7 +13,7 @@ const MyToast = (props) => {
     <View style={{ backgroundColor, padding: 16, marginBottom: 16 }}>
       <Text>Toast Id: {id}</Text>
       <Text>Content: "{content}"</Text>
-      <Button title="Dismiss" onPress={() => Index.remove(id)} />
+      <Button title="Dismiss" onPress={() => Toast.remove(id)} />
     </View>
   );
 };
@@ -21,7 +21,7 @@ const MyToast = (props) => {
 export default () => (
   <Button
     title="Custom-component toast"
-    onPress={() => Index.add({
+    onPress={() => Toast.add({
       backgroundColor: 'yellow',
       content: 'Custom-component toast',
       duration: null, // a null duration will keep the toast open until manually dismissed
