@@ -1,11 +1,16 @@
 {
-  "main": "./index.js",
+  "name": "react-native-toasty",
+  "version": "1.0.0",
+  "description": "React-Native toast notifications",
+  "main": "index.js",
+  "keywords": ["react-native", "react native", "toast"],
+  "author": "Lincoln Anderson",
+  "license": "MIT",
   "dependencies": {
     "lodash": "~4.17.15",
     "react-native-root-siblings": "~4.0.6"
   },
   "peerDependencies": {
     "react-native": ">=61.0.4"
-  },
-  "private": true
+  }
 }
