@@ -1,11 +1,18 @@
 {
   "name": "react-native-toasted",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-Native toast notifications",
   "main": "index.js",
   "keywords": ["react-native", "react native", "toast"],
-  "author": "Lincoln Anderson",
+  "author": {
+    "name": "Lincoln Anderson",
+    "email": "landerson@threefivetwo.com"
+  },
   "license": "MIT",
+  "repository": "github:landerson352/react-native-toasted",
+  "bugs": {
+    "url": "https://github.com/landerson352/react-native-toasted/issues"
+  },
   "dependencies": {
     "lodash": "~4.17.15",
     "react-native-root-siblings": "~4.0.6"

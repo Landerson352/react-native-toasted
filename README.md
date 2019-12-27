@@ -12,37 +12,60 @@ and **structure** the contents however you want.
 yarn add react-native-toasted
 ```
 
-*(No linking required.)*
-
 ## Usage
 
+#### Basic syntax
+
+If `Toasted.add` is called with a string or React node,
+it will be passed into the display component as the `content` prop.
+
 ```jsx
-import Toast from 'react-native-toasted';
+import Toasted from 'react-native-toasted';
 
-// String content shorthand
-Toast.add('Hello Toasty!');
+Toasted.add('Get Toasted!');
+Toasted.add(<Text>Get Toasted!</Text>);
+```
 
-// ReactNode content shorthand
-Toast.add(<Text>Hello Toasty!</Text>);
+#### Full-props syntax
 
-// Full custom props
-Toast.add({
-  content: 'Hello Toasty!',
+To override the duration or display component for a single toast,
+use the full-props syntax.
+
+```jsx
+Toasted.add({
+  content: 'Get Toasted!',
   duration: 3500,
   ToastComponent: ({ content }) => <View><Text>{content}</Text></View>
 });
 ```
 
-[See a more in-depth example.](examples/CustomComponentExample.js)
-
-## Configuration
-
-Make sure to call `Toast.configure` once in your app, before calling `Toasts.add`.
+Also use the full-props syntax to implement your own custom props.
 
 ```jsx
-import Toast, { DefaultToast, DefaultToastContainer } from 'react-native-toasted';
+Toasted.add({
+  icon: 'star',
+  text: 'Get Toasted!',
+  duration: 3500,
+  ToastComponent: ({ icon, text }) => (
+    <View>
+        <Icon name={icon} />
+        <Text>{text}</Text>
+    </View>
+  )
+});
+```
 
-Toast.configure({
+## Global configuration
+
+To set the default props and display components for **all** toasts,
+call `Toasted.configure` once in your app (before calling `Toasted.add`).
+
+(Here we import the default components for demonstration, but you can supply your own.)
+
+```jsx
+import Toasted, { DefaultToast, DefaultToastContainer } from 'react-native-toasted';
+
+Toasted.configure({
 
   // Set default props for every toast
   defaultToastProps: {
@@ -54,8 +77,6 @@ Toast.configure({
   ToastContainerComponent: DefaultToastContainer,
 });
 ```
-
-[See a more in-depth example.](examples/ConfigurationExample.js)
 
 ## Running the example app
 
