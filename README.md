@@ -16,7 +16,7 @@ and **structure** the contents however you want.
 
 ## Installation
 
-```jsx
+```
 yarn add react-native-toasted
 ```
 
