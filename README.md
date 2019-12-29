@@ -63,6 +63,25 @@ Toasted.add({
 });
 ```
 
+#### Manually dismissible
+
+Assign a falsy value for `duration` to keep the toast open indefinitely.
+
+Dismiss a toast at any time by called `Toasted.remove` with the toast's `id` (this is always available as a prop).
+
+```jsx
+Toasted.add({
+  content: 'Get Toasted!',
+  duration: null,
+  ToastComponent: ({ content, id }) => (
+    <View>
+        <Text>{content}</Text>
+        <Button title="Dismiss" onPress={() => Toasted.remove(id)} />
+    </View>
+  )
+});
+```
+
 ## Global configuration
 
 To set the default props and display components for **all** toasts,
