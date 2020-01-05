@@ -82,6 +82,7 @@ Toast.add = (props) => {
     ...validatedProps,
     key: id,
     id,
+    close: () => Toast.remove(id),
   }]);
 
   if (validatedProps.duration) {

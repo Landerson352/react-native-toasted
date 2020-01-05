@@ -6,13 +6,13 @@ import Toast from 'react-native-toasted';
 //  you can assign as defaultToastProps.ToastComponent
 //  or as a one-time use case when adding a toast with the ToastComponent prop (see below).
 const MyToast = (props) => {
-  const { backgroundColor, content, id } = props;
+  const { backgroundColor, close, content, id } = props;
 
   return (
     <View style={{ backgroundColor, padding: 16, marginBottom: 16 }}>
       <Text>Toast Id: {id}</Text>
       <Text>Content: "{content}"</Text>
-      <Button title="Dismiss" onPress={() => Toast.remove(id)} />
+      <Button title="Dismiss" onPress={close} />
     </View>
   );
 };

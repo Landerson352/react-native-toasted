@@ -63,7 +63,7 @@ Toasted.add({
 
 Assign a falsy value for `duration` to keep the toast open indefinitely.
 
-Dismiss a toast at any time by called `Toasted.remove` with the toast's `id` (this is always available as a prop).
+Dismiss a toast at any time by calling the `close` function, provided as a prop.
 
 ```jsx
 Toasted.add({
@@ -77,6 +77,9 @@ Toasted.add({
   )
 });
 ```
+
+Note: You may also remove a toast at any time by calling the global `Toasted.remove` method with the toast's `id` 
+(this is also available as a prop).
 
 ## Global configuration
 
