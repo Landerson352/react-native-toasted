@@ -1,6 +1,6 @@
 {
   "name": "react-native-toasted",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React-Native toast notifications",
   "main": "src/index.js",
   "keywords": [
