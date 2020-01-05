@@ -69,10 +69,10 @@ Dismiss a toast at any time by calling the `close` function, provided as a prop.
 Toasted.add({
   content: 'Get Toasted!',
   duration: null,
-  ToastComponent: ({ content, id }) => (
+  ToastComponent: ({ close, content }) => (
     <View>
         <Text>{content}</Text>
-        <Button title="Dismiss" onPress={() => Toasted.remove(id)} />
+        <Button title="Dismiss" onPress={close} />
     </View>
   )
 });
