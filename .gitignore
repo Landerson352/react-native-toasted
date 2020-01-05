@@ -105,3 +105,6 @@ dist
 
 # InteelliJ IDEA
 .idea
+
+# Build file
+index.js
