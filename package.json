@@ -18,7 +18,8 @@
     "url": "https://github.com/landerson352/react-native-toasted/issues"
   },
   "scripts": {
-    "build": "babel src -d ./"
+    "build": "babel src -d ./",
+    "prepublish": "npm build"
   },
   "dependencies": {
     "lodash": "~4.17.15",
