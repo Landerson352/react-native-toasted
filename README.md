@@ -2,10 +2,6 @@
 ![npm peer dependency version](https://img.shields.io/npm/dependency-version/react-native-toasted/peer/react-native)
 [![dependencies](https://david-dm.org/landerson352/react-native-toasted.svg)](https://david-dm.org/landerson352/react-native-toasted)
 
-![GitHub issues](https://img.shields.io/github/issues-raw/landerson352/react-native-toasted)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/landerson352/react-native-toasted/v1.0.1)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/landerson352/react-native-toasted/issues)
-
 # react-native-toasted
 
 This React-Native toast library offers style and layout customization
