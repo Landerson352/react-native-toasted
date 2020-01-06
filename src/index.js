@@ -1,7 +1,10 @@
 import React from 'react';
-import { LayoutAnimation, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { LayoutAnimation } from 'react-native';
 import RootSiblings from 'react-native-root-siblings';
-import { filter, map, merge, uniqueId } from 'lodash';
+import { filter, merge, uniqueId } from 'lodash';
+
+import DefaultToast from './DefaultToast';
+import DefaultToastContainer from './DefaultToastContainer';
 
 if (
   Platform.OS === 'android' &&
@@ -9,42 +12,6 @@ if (
 ) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
-
-const styles = StyleSheet.create({
-  toastContainer: {
-    ...StyleSheet.absoluteFill,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
-  toast: {
-    alignSelf: 'stretch',
-    backgroundColor: '#eeeeee',
-    borderRadius: 4,
-    margin: 16,
-    marginTop: 0,
-    padding: 16,
-  },
-});
-
-export const DefaultToastContainer = ({ toasts }) => (
-  <SafeAreaView style={styles.toastContainer} pointerEvents="box-none">
-    {map(toasts, ({ ToastComponent, ...toastProps }) => (
-      <ToastComponent {...toastProps} />
-    ))}
-  </SafeAreaView>
-);
-
-export const DefaultToast = ({ content }) => {
-  const cleanContent = (typeof content === 'string')
-    ? <Text>{content}</Text>
-    : content;
-
-  return (
-    <View style={styles.toast}>
-      {cleanContent}
-    </View>
-  );
-};
 
 const Toast = (props) => {
   const {
