@@ -52,8 +52,8 @@ Toasted.add({
   duration: 3500,
   ToastComponent: ({ icon, text }) => (
     <View>
-        <Icon name={icon} />
-        <Text>{text}</Text>
+      <Icon name={icon} />
+      <Text>{text}</Text>
     </View>
   )
 });
@@ -71,8 +71,8 @@ Toasted.add({
   duration: null,
   ToastComponent: ({ close, content }) => (
     <View>
-        <Text>{content}</Text>
-        <Button title="Dismiss" onPress={close} />
+      <Text>{content}</Text>
+      <Button title="Dismiss" onPress={close} />
     </View>
   )
 });
@@ -86,7 +86,11 @@ Note: You may also remove a toast at any time by calling the global `Toasted.rem
 To set the default props and display components for **all** toasts,
 call `Toasted.configure` once in your app (before calling `Toasted.add`).
 
-(Here we import the default components for demonstration, but you can supply your own.)
+(Here we import the default components for demonstration. 
+Feel free to use the source for 
+[DefaultToast](https://github.com/Landerson352/react-native-toasted/blob/master/src/DefaultToast.js) and 
+[DefaultToastContainer](https://github.com/Landerson352/react-native-toasted/blob/master/src/DefaultToastContainer.js) 
+as a template for your own components.)
 
 ```jsx
 import Toasted, { DefaultToast, DefaultToastContainer } from 'react-native-toasted';
